@@ -16,16 +16,16 @@ import org.openqa.selenium.WebDriver;
 
 import framework.driver.Browser;
 import framework.driver.DriverFactory;
-import framework.driver.ViewPort;
+import framework.driver.Device;
 
 @RunWith(Parameterized.class)
 public class CrossBrowserTests {
     private static WebDriver _driver;
     private static String _applicationPath ="http://automationpractice.com/index.php";
     private Browser _browser;
-    private ViewPort _device;
+    private Device _device;
     
-    public CrossBrowserTests(Browser browser, ViewPort device)
+    public CrossBrowserTests(Browser browser, Device device)
     {
     	_browser = browser;
     	_device = device;
@@ -35,13 +35,13 @@ public class CrossBrowserTests {
     public static Collection browsersStrings(){
       return Arrays.asList(new Object[][] 
     	  { 
-	    	  {Browser.Chrome, ViewPort.Desktop}, 
-	    	  {Browser.Firefox, ViewPort.Desktop}, 
-	    	  {Browser.Edge, ViewPort.Desktop}, 
-	    	  {Browser.Chrome, ViewPort.Tablet}, 
-	    	  {Browser.Firefox, ViewPort.Tablet}, 
-	    	  {Browser.Edge, ViewPort.Tablet}, 
-	    	  {Browser.Phone, ViewPort.Phone} 
+	    	  {Browser.Chrome, Device.Desktop}, 
+	    	  {Browser.Firefox, Device.Desktop}, 
+	    	  {Browser.Edge, Device.Desktop}, 
+	    	  {Browser.Chrome, Device.Tablet}, 
+	    	  {Browser.Firefox, Device.Tablet}, 
+	    	  {Browser.Edge, Device.Tablet}, 
+	    	  {Browser.Phone, Device.Phone} 
     	  });
     }
     

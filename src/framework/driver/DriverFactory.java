@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DriverFactory {
 
 	
-    public static WebDriver WebDriver(Browser type, ViewPort device)
+    public static WebDriver WebDriver(Browser type, Device device)
     {
         WebDriver driver = null;
 
@@ -48,7 +48,7 @@ public class DriverFactory {
         return new ChromeDriver(options);
     }
 
-    private static ChromeDriver ChromeDriver(ViewPort device)
+    private static ChromeDriver ChromeDriver(Device device)
     {
         ChromeOptions options = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
@@ -69,7 +69,7 @@ public class DriverFactory {
         return new ChromeDriver(options);
     }
 
-    private static FirefoxDriver FirefoxDriver(ViewPort device)
+    private static FirefoxDriver FirefoxDriver(Device device)
     {
     	WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
@@ -90,7 +90,7 @@ public class DriverFactory {
     }
 
 
-    private static EdgeDriver EdgeDriver(ViewPort device)
+    private static EdgeDriver EdgeDriver(Device device)
     {
     	WebDriverManager.edgedriver().setup();
         EdgeOptions options = new EdgeOptions();

@@ -1,6 +1,6 @@
 package framework.driver;
 
-public enum ViewPort {
+public enum Device {
     Desktop,
     Tablet,
     Phone
